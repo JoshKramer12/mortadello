@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "node server.mjs",
     "build": "node --check server.mjs && node --check public/client.js && node --check lib/game-server.mjs",
+    "test": "node --test test/*.test.mjs",
     "start": "NODE_ENV=production node server.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "drizzle-kit generate"
@@ -18,7 +19,8 @@
     "react": "19.2.6",
     "react-dom": "19.2.6",
     "socket.io": "^4.8.3",
-    "socket.io-client": "^4.8.3"
+    "socket.io-client": "^4.8.3",
+    "ws": "^8.19.0"
   },
   "devDependencies": {
     "@cloudflare/vite-plugin": "1.37.1",
